@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tips</title>
+	<link rel="stylesheet" type="text/css" href="./css/tips.min.css">
+	<script type="text/javascript" src="./js/tips.js"></script>
+	<script type="text/javascript">
+		function on(target,eventstr,callback){
+			//console.log(typeof target);
+			if(typeof target !== "object"){
+				return;
+			}
+			if(document.all){
+				target.attachEvent("on"+eventstr,callback);
+			}else{
+				target.addEventListener(eventstr,callback,false);
+			}
+		}
+		on(window,'load',function(){
+			t1=tips();
+			t1.send("默认的tips,会在屏幕底部中间位置");
+			t1.send("这是suceess类型的tips",'success');
+			t1.send("这是error类型的tips",'error');
+
+			t2=tips({
+				autohidden:false,					//关闭自动隐藏，关闭后需要
+				type:'error',							//初始化指定tips的类型 default、success、error、warning四种类型
+				position:'center-center',	//显示位置top-left top-center top-right bottom-left bottom-center bottom-right center-center
+				css:{											//设置tips的样式
+					margin:"10px",
+					"max-width":"300px"
+				}
+			});
+			t2.send("1.这个是不自动的tips");
+			t2.send("2.这个是不自动的tips");
+			t2.send("3.这个是不自动的tips");
+			t2.send("4.这个是不自动的tips");
+			t2.send("5.这个是不自动的tips");
+
+			t2.send("6.这个是不自动的tips,并且是default类型","default");
+			t2.send("7.这个是不自动的tips,并且是error类型","error");
+			t2.send("8.这个是不自动的tips,并且是success类型","success");
+			t2.send("9.这个是不自动的tips,并且是warning类型","warning");
+
+			t3=tips({
+				autohidden:false,
+				position:'bottom-right',//在右下角显示
+				css:{
+					'max-width':'300px'
+				}
+			});
+			t3.send('这里是右下角的');
+			t3.send('哈哈，我又来啦');
+			t3.send('t3信息');
+
+			t4=tips({
+				autohidden:false,
+				position:'top-right',//在右下角显示
+				css:{
+					'max-width':'300px'
+				}
+			});
+			t4.send("在右上角显示的tips");
+			t4.send("在右上角显示的tips");
+			t4.send("在右上角显示的tips");
+			t4.send("在右上角显示的tips");
+
+			t5=tips({
+				autohidden:true,
+				showtime:4000,
+				position:'top-center'//显示在窗口顶部中间
+			});
+			t5.send("在窗口顶部中间显示的tips");
+			t5.send("在窗口顶部中间显示的tips");
+			t5.send("在窗口顶部中间显示的tips");
+			t5.send("在窗口顶部中间显示的tips");
+
+			t6=tips({
+				showtime:5000,
+				position:'top-left'
+			});
+			t6.send("显示在窗口左上角的tips");
+			t6.send("显示在窗口左上角的tips");
+			t6.send("显示在窗口左上角的tips");
+			t6.send("显示在窗口左上角的tips");
+
+			t7=tips({
+				showtime:5000,
+				position:'bottom-left'
+			});
+
+			t7.send("显示在窗口左下角的tips");
+			t7.send("显示在窗口左下角的tips");
+			t7.send("显示在窗口左下角的tips");
+			t7.send("显示在窗口左下角的tips");
+			t7.send("显示在窗口左下角的tips");
+		});
+	</script>
+	<style type="text/css">
+		body{
+			font-family: '微软雅黑';
+			background: url(./images/step_bg.png);
+		}
+
+
+	</style>
+</head>
+<body>
+
+</body>
+</html>

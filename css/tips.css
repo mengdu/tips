@@ -1,0 +1,160 @@
+/**
+*  tips.css
+*  小贴士
+*  @author lanyue
+*  @time 2016-04-19
+***/
+
+.tips-box{
+	background: none;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	display: -ms-flex;
+
+	flex-flow:column nowrap;
+	-webkit-flex-flow:column nowrap;
+	-moz-flex-flow:column nowrap;
+	-ms-flex-flow:column nowrap;
+	-o-flex-flow:column nowrap;
+}
+.tips-box,.align-items-center{
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-o-align-items: center;
+	-ms-align-items: center;
+}
+.align-items-left{
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+	-moz-align-items: flex-start;
+	-o-align-items: flex-start;
+	-ms-align-items: flex-start;
+}
+.align-items-right{
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
+	-moz-align-items: flex-end;
+	-o-align-items: flex-end;
+	-ms-align-items: flex-end;
+}
+.justify-content-center{
+	justify-content: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+}
+.tips-bg{
+	margin:5px;
+	background:rgba(210, 210, 210, 0.72);
+	padding: 10px;
+	border-radius: 4px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+	
+	color:#585858;
+	font-size: 14px;
+	
+}
+.tips-box,.tips-bg{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-transition: all 0.5s ease;/* Safari and Chrome or liebao*/
+	-moz-transition: all 0.5s ease;/*Firefox */
+	-o-transition: all 0.5s ease;/*Opera */
+	-ms-transition: all 0.5s ease;/*for ie*/
+	transition: all 0.5s ease;
+}
+.tips-box:before,.tips-box:after,
+.tips-bg:before,.tips-bg:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.tips-min{
+	padding: 6px;
+	font-size: 13px;
+}
+
+.tips-success,
+.tips-warning{
+	color:#FBFBFB;
+}
+.tips-error{
+	color: #A9150F;
+}
+.tips-default{
+	background:rgba(210, 210, 210, 0.72);
+	color: #585858;
+}
+.tips-error{
+	background: rgba(220, 100, 96, 0.72);
+}
+.tips-success{
+	background: rgba(14, 193, 85, 0.72);
+}
+.tips-warning{
+	background: rgba(254, 91, 14, 0.72);
+}
+.tips-icon{
+	width: 20px;
+	height: 20px;
+	float: left;
+	display: inline-block;
+	background-image: url(../images/icon_05-09.png);
+	background-size: cover;
+}
+
+.tips-error .tips-icon{
+	background-image: url(../images/icon_03.png);
+}
+.tips-success .tips-icon{
+	background-image: url(../images/icon_05.png);
+}
+.tips-warning .tips-icon{
+	background-image: url(../images/icon_05-07.png);
+}
+.tips-min .tips-icon{
+	width: 16px;
+	height: 16px;
+}
+.icon-emoji-happy{
+	background-image: url(../images/icon_03-17.png);
+}
+.icon-emoji-sad{
+	background-image: url(../images/icon_03-16.png);
+}
+.tips-centent{
+	padding-left: 5px;
+	float: left;
+	display: inline-block;
+}
+.tips-centent a{
+	color:#3385FF;
+	text-decoration: none;
+}
+.tips-centent a:hover{
+	text-decoration: underline;
+}
+.tips-close{
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.55);
+	cursor: pointer;
+	font-weight: 600;
+	pointer-events: all;
+	padding-left: 10px;
+	float: right;
+	user-select: none;
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+}
+.tips-close:hover{
+	text-decoration: none;
+	color:rgba(255, 255, 255, 0.8);
+}
