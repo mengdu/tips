@@ -1,6 +1,8 @@
 ### tips.js
 > tips.js 是一个小贴士工具，可以在网页中用来提示信息;无需任何其他插件支持。
 
+![image](https://github.com/mengdu/tips/raw/master/jietu.png)
+
 ### 使用教程
 ###### 必须文件：
   + tips.js        
